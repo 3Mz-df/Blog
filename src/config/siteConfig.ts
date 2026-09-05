@@ -35,7 +35,7 @@ const pages = resolvePageToggles({
 	// ── 关于 (About) ──────────────────────────────────
 
 	// 打赏页面开关
-	sponsor: true,
+	sponsor: false,
 });
 
 export const siteConfig: SiteConfig = {
@@ -46,7 +46,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "3Mz",
 
 	// 站点 URL
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "https://blog.liuta0.xyz/",
 
 	// 站点描述
 	description:
@@ -66,9 +66,9 @@ export const siteConfig: SiteConfig = {
 	// 主题色
 	themeColor: {
 		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		hue: 165,
+		hue: 200,
 		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
-		defaultMode: "system",
+		defaultMode: "dark",
 	},
 
 	// 页面整体宽度（单位：rem）
@@ -79,15 +79,15 @@ export const siteConfig: SiteConfig = {
 	// 网站Card样式配置
 	card: {
 		// 是否开启卡片边框和阴影，开启后让网站更有立体感
-		border: false,
+		border: true,
 		// 是否让卡片风格跟随主题色相
-		followTheme: false,
+		followTheme: true,
 	},
 
 	// Favicon 配置
 	// 如果启用了OpenGraph图片功能，数组中需要包含png格式的favicon图标
 	favicon: [
-		{
+        {
 			// 图标文件路径
 			src: "/favicon/firefly-32.png",
 			// 可选，指定主题 'light' | 'dark'
@@ -109,19 +109,17 @@ export const siteConfig: SiteConfig = {
 		// 例如: { type: "image", value: "assets/images/logo.png", valueDark: "assets/images/logo-dark.png", alt: "Logo" }
 		// 使用 Astro 图标库时不需要设置 valueDark，图标会自动跟随主题亮暗色切换
 		logo: {
-			type: "image",
-			value: "assets/images/logo/firefly-light.png",
-			valueDark: "assets/images/logo/firefly-dark.png",
-			alt: "🥪",
+			type: "text",
+			value: "🥪",
 		},
 		// 导航栏标题
 		title: "3Mz",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
-		widthFull: false,
+		widthFull: true,
 		// 导航菜单对齐方式，left：左对齐，center：居中
 		menuAlign: "center",
 		// 导航栏图标和标题是否跟随主题色
-		followTheme: false,
+		followTheme: true,
 		// 导航栏是否固定在顶部并始终可见
 		stickyNavbar: true,
 	},
@@ -136,7 +134,7 @@ export const siteConfig: SiteConfig = {
 	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404并自动隐藏对应的导航栏菜单项
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
-	categoryBar: true,
+	categoryBar: false,
 
 	// 分类导航栏按钮样式
 	// "pill"：胶囊，主题色浅底圆角
@@ -147,7 +145,7 @@ export const siteConfig: SiteConfig = {
 	// "pill"：胶囊，主题色底圆角
 	// "pill-gray"：胶囊，中性灰底圆角
 	// "rectangle"：矩形，主题色底小圆角
-	tagStyle: "pill",
+	tagStyle: "rectangle",
 
 	// 归档页是否折叠非最新年份文章，禁用后默认展开全部年份
 	foldArticle: true,
@@ -178,9 +176,9 @@ export const siteConfig: SiteConfig = {
 			// 是否显示发布日期
 			showPublished: true,
 			// 是否显示分类
-			showCategory: true,
+			showCategory: false,
 			// 是否显示标签
-			showTags: true,
+			showTags: false,
 			// 标签数量，设为 0 则不限制
 			tagCount: 3,
 			// 是否显示字数
@@ -214,7 +212,7 @@ export const siteConfig: SiteConfig = {
 	// 分页配置
 	pagination: {
 		// 每页显示的文章数量
-		postsPerPage: 10,
+		postsPerPage: 20,
 	},
 
 	// ── 文章内容页配置 ──────────────────────────────────

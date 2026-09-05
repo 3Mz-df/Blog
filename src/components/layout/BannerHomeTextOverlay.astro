@@ -1,12 +1,12 @@
----
+﻿---
 import { Icon } from "astro-icon/components";
 import TypewriterText from "@/components/features/TypewriterText.astro";
 import { backgroundWallpaper } from "@/config";
 import { encodeMailto, MAILTO_ONCLICK_SCRIPT } from "@/utils/email-utils";
 
 interface Props {
-	showHomeText: boolean;
-	initialRandomSubtitle: string | undefined;
+    showHomeText: boolean;
+    initialRandomSubtitle: string | undefined;
 }
 
 const { showHomeText, initialRandomSubtitle } = Astro.props;
@@ -20,7 +20,16 @@ const homeTextLinksEnable = homeText?.linksEnable !== false;
             <div class="flex flex-col">
                 {homeText.title && (
                     <div class="banner-title font-bold text-white mb-2 lg:mb-4 leading-tight" style={{ '--banner-title-size': homeText.titleSize || "3rem" }}>
-                        {homeText.title}
+                        {homeText.typewriter?.enable ? (
+                            <TypewriterText
+                                text={homeText.title}
+                                speed={homeText.typewriter.speed}
+                                deleteSpeed={homeText.typewriter.deleteSpeed}
+                                pauseTime={homeText.typewriter.pauseTime}
+                            />
+                        ) : (
+                            homeText.title
+                        )}
                     </div>
                 )}
                 {homeText.subtitle && (

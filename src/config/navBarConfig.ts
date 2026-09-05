@@ -16,23 +16,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 主页
 	links.push(LinkPresets.Home);
 
-	// 文章及其子菜单
-	links.push({
-		name: "文章",
-		url: "#",
-		icon: "material-symbols:article",
-		children: [
-			// 归档
-			LinkPresets.Archive,
-
-			// 分类
-			LinkPresets.Categories,
-
-			// 标签
-			LinkPresets.Tags,
-		],
-	});
-
 	//社交及其子菜单
 	links.push({
 		name: "社交",
@@ -99,7 +82,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		children: [
 			{
 				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
+				url: "https://github.com/3Mz-df/Firefly",
 				external: true,
 				icon: "fa7-brands:github",
 			},
@@ -149,21 +132,6 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		name: "主页",
 		url: "/",
 		icon: "material-symbols:home",
-	},
-	Archive: {
-		name: "归档",
-		url: "/archive/",
-		icon: "material-symbols:archive",
-	},
-	Categories: {
-		name: "分类",
-		url: "/categories/",
-		icon: "material-symbols:folder-open-rounded",
-	},
-	Tags: {
-		name: "标签",
-		url: "/tags/",
-		icon: "material-symbols:tag-rounded",
 	},
 	Friends: {
 		name: "友链",

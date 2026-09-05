@@ -4,7 +4,6 @@ import * as path from "node:path";
 import type { ImageMetadata } from "astro";
 import { Icon } from "astro-icon/components";
 import DisplaySettings from "@/components/controls/DisplaySettingsIntegrated.svelte";
-import LightDarkSwitch from "@/components/controls/LightDarkSwitch.svelte";
 import Search from "@/components/controls/Search.svelte";
 import MusicPlayer from "@/components/features/MusicPlayer.astro";
 import {
@@ -186,7 +185,7 @@ const logoVariants = await Promise.all(
                     "flex flex-row items-center text-md",
                     siteConfig.navbar.followTheme ? "text-(--primary)" : "dark:text-white text-black"
                 ]} style="font-family: var(--font-navbar-title, inherit)">
-                                    {logoConfig?.type === "icon" ? (
+                                    {logoConfig?.type === "text" ? (<span class="navbar-logo text-[1.75rem] mb-1 mr-2 leading-none select-none">{logoConfig?.value}</span>) : logoConfig?.type === "icon" ? (
                                         <Icon is:inline name={logoConfig.value || "material-symbols:home-pin-outline"} class="navbar-logo text-[1.75rem] mb-1 mr-2" />
                                     ) : logoIsImage && logoVariants.length > 0 ? (
                                         logoVariants.map((variant) => variant.image ? (
@@ -247,8 +246,6 @@ const logoVariants = await Promise.all(
                             <Icon is:inline name="material-symbols:palette-outline" class="text-[1.25rem]"></Icon>
                         </button>
                 )}
-                {/* @ts-ignore */}
-                <LightDarkSwitch client:load></LightDarkSwitch>
                 <button aria-label="Menu" aria-controls="nav-menu-panel" aria-expanded="false" name="Nav Menu" class="btn-plain scale-animation rounded-lg w-9 h-9 md:w-11 md:h-11 active:scale-90 lg:hidden!" id="nav-menu-switch">
                     <Icon is:inline name="material-symbols:menu-rounded" class="text-[1.25rem]"></Icon>
                 </button>
