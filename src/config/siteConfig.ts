@@ -1,4 +1,4 @@
-import type { SiteConfig } from "@/types/siteConfig";
+﻿import type { SiteConfig } from "@/types/siteConfig";
 import { resolvePageToggles } from "../utils/page-toggle-utils";
 import { resolveSiteLang } from "../utils/site-config-utils";
 
@@ -89,7 +89,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
         {
 			// 图标文件路径
-			src: "/favicon/firefly-32.png",
+			src: "/favicon/sandwich.svg",
 			// 可选，指定主题 'light' | 'dark'
 			// theme: "light",
 			// 可选，图标大小
