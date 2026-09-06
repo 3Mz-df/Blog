@@ -7,39 +7,27 @@
 :root
   --hue: 200
   --primary: #b3b3b3
-  --primary: oklch(0.70 0 var(--hue))
   --page-bg: #f2f2f2
-  --page-bg: oklch(0.95 0 var(--hue))
   --card-bg: white
   --card-bg-transparent: unquote("rgb(255 255 255 / var(--card-transparent-opacity, 0.6))")
-  
+
   --btn-content: #8c8c8c
-  --btn-content: oklch(0.55 0 var(--hue))
+
   --btn-regular-bg: #f2f2f2
-  --btn-regular-bg: oklch(0.95 0 var(--hue))
   --btn-regular-bg-hover: #e6e6e6
-  --btn-regular-bg-hover: oklch(0.9 0 var(--hue))
   --btn-regular-bg-active: #d9d9d9
-  --btn-regular-bg-active: oklch(0.85 0 var(--hue))
-  
+
   --btn-plain-bg-hover: #f2f2f2
-  --btn-plain-bg-hover: oklch(0.95 0 var(--hue))
   --btn-plain-bg-active: #fafafa
-  --btn-plain-bg-active: oklch(0.98 0 var(--hue))
-  
+
   --btn-card-bg-hover: #fafafa
-  --btn-card-bg-hover: oklch(0.98 0 var(--hue))
   --btn-card-bg-active: #e6e6e6
-  --btn-card-bg-active: oklch(0.9 0 var(--hue))
   
   --enter-btn-bg: var(--btn-regular-bg)
   --enter-btn-bg-hover: var(--btn-regular-bg-hover)
   --enter-btn-bg-active: var(--btn-regular-bg-active)
-  
-  --deep-text: #404040
-  --deep-text: oklch(0.25 0 var(--hue))
+
   --title-active: #999999
-  --title-active: oklch(0.6 0 var(--hue))
   
   --line-divider: rgba(0, 0, 0, 0.08)
   --line-color: rgba(0, 0, 0, 0.1)
@@ -49,22 +37,14 @@
   --inline-code-bg: var(--btn-regular-bg)
   --inline-code-color: var(--btn-content)
   --muted: #ededed
-  --muted: oklch(0.93 0 var(--hue))
   --selection-bg: #e6e6e6
-  --selection-bg: oklch(0.90 0 var(--hue))
   --codeblock-bg: #2b2b2b
-  --codeblock-bg: oklch(0.17 0 var(--hue))
   --codeblock-topbar-bg: #4d4d4d
-  --codeblock-topbar-bg: oklch(0.3 0 var(--hue))
   
   --license-block-bg: rgba(0, 0, 0, 0.03)
-  
-  --link-underline: #ededed
-  --link-underline: oklch(0.93 0 var(--hue))
+
   --link-hover: #f2f2f2
-  --link-hover: oklch(0.95 0 var(--hue))
   --link-active: #e6e6e6
-  --link-active: oklch(0.90 0 var(--hue))
   
   --float-panel-bg: white
   
@@ -82,99 +62,60 @@
   
   --display-light-icon: 1
   --display-dark-icon: 0
-  
-  --admonitions-color-tip: #4db8a8
-  --admonitions-color-tip: oklch(0.7 0.14 180)
+
   --admonitions-color-note: #6a8fd4
-  --admonitions-color-note: oklch(0.7 0.14 250)
   --admonitions-color-important: #c47ad4
-  --admonitions-color-important: oklch(0.7 0.14 310)
   --admonitions-color-warning: #d4c47a
-  --admonitions-color-warning: oklch(0.7 0.14 60)
   --admonitions-color-caution: #d47a4a
-  --admonitions-color-caution: oklch(0.6 0.2 25)
   
   /* TOC相关变量 */
   --toc-badge-bg: #e6e6e6
-  --toc-badge-bg: oklch(0.9 0 var(--hue))
   --toc-btn-hover: #ebebeb
-  --toc-btn-hover: oklch(0.92 0 var(--hue))
   --toc-btn-active: #e6e6e6
-  --toc-btn-active: oklch(0.90 0 var(--hue))
   --toc-indicator-bg: #ebebeb
-  --toc-indicator-bg: oklch(0.92 0 var(--hue))
   --toc-width: calc((100vw - var(--page-width)) / 2 - 1rem)
   --toc-item-active: #b3b3b3
-  --toc-item-active: oklch(0.70 0 var(--hue))
 
   /* Live2D 消息框变量 */
   --l2d-msg-bg: #b3b3b3
-  --l2d-msg-bg: oklch(0.7 0 var(--hue))
 
   /* 主题色选择条渐变 */
-  --color-selection-bar: linear-gradient(to right, #e0b3b3, #e0c4b3, #e0d4b3, #d4e0b3, #b3e0b3, #b3e0c4, #b3e0d4, #b3d4e0, #b3c4e0, #c4b3e0, #d4b3e0, #e0b3d4, #e0b3b3)
-  --color-selection-bar: linear-gradient(to right, oklch(0.80 0.10 0), oklch(0.80 0.10 30), oklch(0.80 0.10 60), oklch(0.80 0.10 90), oklch(0.80 0.10 120), oklch(0.80 0.10 150), oklch(0.80 0.10 180), oklch(0.80 0.10 210), oklch(0.80 0.10 240), oklch(0.80 0.10 270), oklch(0.80 0.10 300), oklch(0.80 0.10 330), oklch(0.80 0.10 360)), #e0d4b3, oklch(0.80 0.10 60), #d4e0b3, oklch(0.80 0.10 90), #b3e0b3, oklch(0.80 0.10 120), #b3e0c4, oklch(0.80 0.10 150), #b3e0d4, oklch(0.80 0.10 180), #b3d4e0, oklch(0.80 0.10 210), #b3c4e0, oklch(0.80 0.10 240), #c4b3e0, oklch(0.80 0.10 270), #d4b3e0, oklch(0.80 0.10 300), #e0b3d4, oklch(0.80 0.10 330), #e0b3b3, oklch(0.80 0.10 360))
+  --color-selection-bar: linear-gradient(to right, #e0b3b3, #e0c4b3, #e0d4b3, #d4e0b3, #b3e0b3, #b3e0c4, #b3e0d4, #b3d4e0, #b3c4e0, #c4b3e0, #d4b3e0, #e0b3d4, #e0b3b3
+  --color-selection-bar: linear-gradient(to right, #e0b3b3, #e0c4b3, #e0d4b3, #d4e0b3, #b3e0b3, #b3e0c4, #b3e0d4, #b3d4e0, #b3c4e0, #c4b3e0, #d4b3e0, #e0b3d4, #e0b3b3, #e0d4b3, #e0d4b3, #d4e0b3, #d4e0b3, #b3e0b3, #b3e0b3, #b3e0c4, #b3e0c4, #b3e0d4, #b3e0d4, #b3d4e0, #b3d4e0, #b3c4e0, #b3c4e0, #c4b3e0, #c4b3e0, #d4b3e0, #d4b3e0, #e0b3d4, #e0b3d4, #e0b3b3, #e0b3b3
 
 /* 卡片风格跟随主题色相 */
 :root:not(.dark) body.card-follow-theme-hue
   --card-bg: #ffffff
-  --card-bg: oklch(1 0 var(--hue))
 
 /* 暗色主题变量 */
 :root.dark
   --primary: #bfbfbf
-  --primary: oklch(0.75 0 var(--hue))
   --page-bg: #292929
-  --page-bg: oklch(0.16 0 var(--hue))
   --card-bg: #3b3b3b
-  --card-bg: oklch(0.23 0 var(--hue))
   --card-bg-transparent: unquote("rgb(23 23 23 / var(--card-transparent-opacity, 0.6))")
-  
-  --btn-content: #bfbfbf
-  --btn-content: oklch(0.75 0 var(--hue))
+
   --btn-regular-bg: #545454
-  --btn-regular-bg: oklch(0.33 0 var(--hue))
   --btn-regular-bg-hover: #616161
-  --btn-regular-bg-hover: oklch(0.38 0 var(--hue))
   --btn-regular-bg-active: #6e6e6e
-  --btn-regular-bg-active: oklch(0.43 0 var(--hue))
-  
-  --btn-plain-bg-hover: #4d4d4d
-  --btn-plain-bg-hover: oklch(0.30 0 var(--hue))
+
   --btn-plain-bg-active: #454545
-  --btn-plain-bg-active: oklch(0.27 0 var(--hue))
-  
-  --btn-card-bg-hover: #4d4d4d
-  --btn-card-bg-hover: oklch(0.3 0 var(--hue))
+
   --btn-card-bg-active: #595959
-  --btn-card-bg-active: oklch(0.35 0 var(--hue))
   
   --line-divider: rgba(255, 255, 255, 0.08)
   --line-color: rgba(255, 255, 255, 0.1)
   --meta-divider: rgba(255, 255, 255, 0.2)
   --content-meta: rgba(255, 255, 255, 0.6)
-  
-  --muted: #404040
-  --muted: oklch(0.25 0 var(--hue))
+
   --selection-bg: #666666
-  --selection-bg: oklch(0.40 0 var(--hue))
   --codeblock-bg: #2b2b2b
-  --codeblock-bg: oklch(0.17 0 var(--hue))
   --codeblock-topbar-bg: #1f1f1f
-  --codeblock-topbar-bg: oklch(0.12 0 var(--hue))
   
   --license-block-bg: var(--codeblock-bg)
-  
-  --link-underline: #666666
-  --link-underline: oklch(0.40 0 var(--hue))
+
   --link-hover: #666666
-  --link-hover: oklch(0.40 0 var(--hue))
   --link-active: #595959
-  --link-active: oklch(0.35 0 var(--hue))
-  
-  --float-panel-bg: #303030
-  --float-panel-bg: oklch(0.19 0 var(--hue))
-  
+
   --scrollbar-bg: var(--scrollbar-bg-dark)
   --scrollbar-bg-hover: var(--scrollbar-bg-hover-dark)
   --scrollbar-bg-active: var(--scrollbar-bg-active-dark)
@@ -182,30 +123,25 @@
   --display-light-icon: 0
   --display-dark-icon: 1
   
-  --admonitions-color-tip: oklch(0.75 0.14 180)
-  --admonitions-color-note: oklch(0.75 0.14 250)
-  --admonitions-color-important: oklch(0.75 0.14 310)
-  --admonitions-color-warning: oklch(0.75 0.14 60)
-  --admonitions-color-caution: oklch(0.65 0.2 25)
+  --admonitions-color-tip: #5cc4b0
+  --admonitions-color-note: #7a9edb
+  --admonitions-color-important: #cd85db
+  --admonitions-color-warning: #dbcd7a
+  --admonitions-color-caution: #db7a4a
   
   /* TOC相关变量 - 暗色主题 */
   --toc-badge-bg: var(--btn-regular-bg)
   --toc-btn-hover: #474747
-  --toc-btn-hover: oklch(0.28 0 var(--hue))
   --toc-btn-active: #525252
-  --toc-btn-active: oklch(0.32 0 var(--hue))
   --toc-indicator-bg: #474747
-  --toc-indicator-bg: oklch(0.28 0 var(--hue))
   --toc-item-active: #595959
-  --toc-item-active: oklch(0.35 0 var(--hue))
 
   /* Live2D 消息框变量 - 暗色主题 */
   --l2d-msg-bg: #595959
-  --l2d-msg-bg: oklch(0.35 0 var(--hue))
 
   /* 主题色选择条渐变 - 暗色主题 */
-  --color-selection-bar: linear-gradient(to right, #b38080, #b38f80, #b39f80, #8fb380, #80b380, #80b38f, #80b39f, #809fb3, #808fb3, #8f80b3, #9f80b3, #b3809f, #b38080)
-  --color-selection-bar: linear-gradient(to right, oklch(0.70 0.10 0), oklch(0.70 0.10 30), oklch(0.70 0.10 60), oklch(0.70 0.10 90), oklch(0.70 0.10 120), oklch(0.70 0.10 150), oklch(0.70 0.10 180), oklch(0.70 0.10 210), oklch(0.70 0.10 240), oklch(0.70 0.10 270), oklch(0.70 0.10 300), oklch(0.70 0.10 330), oklch(0.70 0.10 360)), oklch(0.70 0.10 60), oklch(0.70 0.10 90), oklch(0.70 0.10 120), oklch(0.70 0.10 150), oklch(0.70 0.10 180), oklch(0.70 0.10 210), oklch(0.70 0.10 240), oklch(0.70 0.10 270), oklch(0.70 0.10 300), oklch(0.70 0.10 330), oklch(0.70 0.10 360))
+  --color-selection-bar: linear-gradient(to right, #b38080, #b38f80, #b39f80, #8fb380, #80b380, #80b38f, #80b39f, #809fb3, #808fb3, #8f80b3, #9f80b3, #b3809f, #b38080
+  --color-selection-bar: linear-gradient(to right, #b38080, #b38f80, #b39f80, #8fb380, #80b380, #80b38f, #80b39f, #809fb3, #808fb3, #8f80b3, #9f80b3, #b3809f, #b38080, #b39f80, #8fb380, #80b380, #80b38f, #80b39f, #809fb3, #808fb3, #8f80b3, #9f80b3, #b3809f, #b38080
 
 /* ===== 响应式断点变量 ===== */
 :root

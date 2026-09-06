@@ -204,15 +204,15 @@ body.wallpaper-transparent .custom-md {
   }
 
   th {
-    background-color: color-mix(in oklch, var(--btn-regular-bg) 72%, transparent);
+    background-color: rgba(128, 128, 128, 0.5) 72%, transparent);
   }
 
   td {
-    background-color: color-mix(in oklch, var(--card-bg-transparent) 92%, transparent);
+    background-color: rgba(128, 128, 128, 0.5) 92%, transparent);
   }
 
   tr:nth-child(even) td {
-    background-color: color-mix(in oklch, var(--btn-plain-bg-active) 68%, transparent);
+    background-color: rgba(128, 128, 128, 0.5) 68%, transparent);
   }
 }
 

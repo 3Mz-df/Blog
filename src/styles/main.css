@@ -490,11 +490,11 @@ html {
 
     .btn-regular-dark {
         @apply flex items-center justify-center
-        bg-[oklch(0.45_0.01_var(--hue))] hover:bg-[oklch(0.50_0.01_var(--hue))] active:bg-[oklch(0.55_0.01_var(--hue))]
-        dark:bg-[oklch(0.30_0.02_var(--hue))] dark:hover:bg-[oklch(0.35_0.03_var(--hue))] dark:active:bg-[oklch(0.40_0.03_var(--hue))]
+        bg-[#757070] hover:bg-[#827d7d] active:bg-[#8f8a8a]
+        dark:bg-[#504949] dark:hover:bg-[#5f5454] dark:active:bg-[#6c6060]
     }
     .btn-regular-dark.success {
-        @apply bg-[oklch(0.75_0.14_var(--hue))] dark:bg-[oklch(0.75_0.14_var(--hue))]
+        @apply bg-[#d1adad] dark:bg-[#d1adad]
     }
 }
 
@@ -539,7 +539,7 @@ html {
 
 /* 浅色模式：使用更浅的主题色且完全不透明 */
 :root:not(.dark) .custom-md spoiler {
-  --_spoiler-mask: color-mix(in oklch, var(--primary) 55%, white 45%);
+  --_spoiler-mask: #d9d9d9;
 }
 
 /* 文章列表布局切换样式 */

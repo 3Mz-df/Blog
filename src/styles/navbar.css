@@ -97,7 +97,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
     /* "semi" */
     html[data-has-wallpaper] #navbar[data-transparent-mode="semi"]>div {
         --navbar-surface-blur: var(--navbar-glass-blur, 20px) !important;
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         border-radius: 0 0 0.75rem 0.75rem !important;
         box-shadow: var(--shadow-navbar) !important;
     }
@@ -123,7 +123,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
     /* "semifull" (scrolled) */
     html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"].scrolled>div {
         --navbar-surface-blur: var(--navbar-glass-blur, 20px) !important;
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         border-radius: 0 0 0.75rem 0.75rem !important;
         box-shadow: var(--shadow-navbar) !important;
     }
@@ -138,7 +138,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
     /* "semi" */
     html[data-has-wallpaper] #navbar[data-transparent-mode="semi"][data-is-home="true"]>div {
         --navbar-surface-blur: var(--navbar-glass-blur, 20px) !important;
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         border-radius: 0 0 0.75rem 0.75rem !important;
         box-shadow: var(--shadow-navbar) !important;
     }
@@ -164,7 +164,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
     /* "semifull" (scrolled) */
     html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"][data-is-home="true"].scrolled>div {
         --navbar-surface-blur: var(--navbar-glass-blur, 20px) !important;
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         border-radius: 0 0 0.75rem 0.75rem !important;
         box-shadow: var(--shadow-navbar) !important;
     }
@@ -177,7 +177,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
 
     /* "semi" */
     :root.dark[data-has-wallpaper] #navbar[data-transparent-mode="semi"]>div {
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         box-shadow: var(--shadow-navbar-dark) !important;
     }
 
@@ -197,7 +197,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
 
     /* "semifull" (scrolled) */
     :root.dark[data-has-wallpaper] #navbar[data-transparent-mode="semifull"].scrolled>div {
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         box-shadow: var(--shadow-navbar-dark) !important;
     }
 }
@@ -209,7 +209,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
 
     /* "semi" */
     :root.dark[data-has-wallpaper] #navbar[data-transparent-mode="semi"][data-is-home="true"]>div {
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         box-shadow: var(--shadow-navbar-dark) !important;
     }
 
@@ -229,7 +229,7 @@ html[data-has-wallpaper] #navbar[data-transparent-mode="semifull"]:not(.scrolled
 
     /* "semifull" (scrolled) */
     :root.dark[data-has-wallpaper] #navbar[data-transparent-mode="semifull"][data-is-home="true"].scrolled>div {
-        background: color-mix(in oklch, var(--card-bg) calc(var(--opacity-55) * 100%), transparent) !important;
+        background: rgba(59, 59, 59, 0.55) !important;
         box-shadow: var(--shadow-navbar-dark) !important;
     }
 }

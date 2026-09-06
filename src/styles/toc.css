@@ -49,12 +49,12 @@
 }
 
 .toc-item:hover {
-	background: color-mix(in oklab, var(--toc-btn-hover), transparent);
+	background: rgba(128, 128, 128, 0.5), transparent);
 	transform: translateX(1px);
 }
 
 .toc-item:active {
-	background: color-mix(in oklab, var(--toc-btn-active), transparent);
+	background: rgba(128, 128, 128, 0.5), transparent);
 }
 
 .toc-item.toc-level-1 {
@@ -79,11 +79,11 @@
 }
 
 .toc-label-primary {
-	color: color-mix(in oklab, var(--content-meta) 78%, var(--primary));
+	color: rgba(128, 128, 128, 0.5) 78%, var(--primary));
 }
 
 .toc-label-secondary {
-	color: color-mix(in oklab, var(--content-meta) 88%, transparent);
+	color: rgba(128, 128, 128, 0.5) 88%, transparent);
 }
 
 .toc-badge {
@@ -107,17 +107,17 @@
 	width: 0.48rem;
 	height: 0.48rem;
 	border-radius: 999px;
-	background: color-mix(in oklab, var(--primary) 26%, var(--line-color));
+	background: rgba(128, 128, 128, 0.5) 26%, var(--line-color));
 }
 
 .toc-badge-dot-sm {
 	width: 0.34rem;
 	height: 0.34rem;
-	background: color-mix(in oklab, var(--primary) 16%, var(--line-color));
+	background: rgba(128, 128, 128, 0.5) 16%, var(--line-color));
 }
 
 .toc-item.visible .toc-label {
-	color: color-mix(in oklab, var(--content-meta) 58%, var(--primary));
+	color: rgba(128, 128, 128, 0.5) 58%, var(--primary));
 	opacity: 1;
 }
 
@@ -131,10 +131,10 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	background: color-mix(in oklab, var(--toc-indicator-bg), transparent);
+	background: rgba(128, 128, 128, 0.5), transparent);
 	border-radius: 0.875rem;
 	transition: top 0.18s ease, height 0.18s ease, opacity 0.14s ease;
-	box-shadow: 0 6px 18px -14px color-mix(in oklab, var(--primary) 55%, transparent);
+	box-shadow: 0 6px 18px -14px rgba(128, 128, 128, 0.5) 55%, transparent);
 	z-index: -1;
 }
 
