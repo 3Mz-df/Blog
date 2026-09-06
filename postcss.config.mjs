@@ -18,9 +18,9 @@ const unwrapCascadeLayers = () => ({
 });
 
 export default {
-    plugins: {
-        'postcss-import': postcssImport,
-        'postcss-nesting': postcssNesting,
-        'unwrap-cascade-layers': unwrapCascadeLayers(),
-    }
+  plugins: [
+    postcssImport(),
+    postcssNesting(),
+    unwrapCascadeLayers(),
+  ]
 };

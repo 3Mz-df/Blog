@@ -204,15 +204,15 @@ body.wallpaper-transparent .custom-md {
   }
 
   th {
-    background-color: rgba(128, 128, 128, 0.5) 72%, transparent);
+    background-color: rgba(128, 128, 128, 0.5);
   }
 
   td {
-    background-color: rgba(128, 128, 128, 0.5) 92%, transparent);
+    background-color: rgba(128, 128, 128, 0.5);
   }
 
   tr:nth-child(even) td {
-    background-color: rgba(128, 128, 128, 0.5) 68%, transparent);
+    background-color: rgba(128, 128, 128, 0.5);
   }
 }
 

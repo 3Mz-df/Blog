@@ -49,12 +49,12 @@
 }
 
 .toc-item:hover {
-	background: rgba(128, 128, 128, 0.5), transparent);
+	background: rgba(128, 128, 128, 0.5);
 	transform: translateX(1px);
 }
 
 .toc-item:active {
-	background: rgba(128, 128, 128, 0.5), transparent);
+	background: rgba(128, 128, 128, 0.5);
 }
 
 .toc-item.toc-level-1 {
@@ -79,11 +79,11 @@
 }
 
 .toc-label-primary {
-	color: rgba(128, 128, 128, 0.5) 78%, var(--primary));
+	color: rgba(128, 128, 128, 0.5);
 }
 
 .toc-label-secondary {
-	color: rgba(128, 128, 128, 0.5) 88%, transparent);
+	color: rgba(128, 128, 128, 0.5);
 }
 
 .toc-badge {
@@ -107,17 +107,17 @@
 	width: 0.48rem;
 	height: 0.48rem;
 	border-radius: 999px;
-	background: rgba(128, 128, 128, 0.5) 26%, var(--line-color));
+	background: rgba(128, 128, 128, 0.5);
 }
 
 .toc-badge-dot-sm {
 	width: 0.34rem;
 	height: 0.34rem;
-	background: rgba(128, 128, 128, 0.5) 16%, var(--line-color));
+	background: rgba(128, 128, 128, 0.5);
 }
 
 .toc-item.visible .toc-label {
-	color: rgba(128, 128, 128, 0.5) 58%, var(--primary));
+	color: rgba(128, 128, 128, 0.5);
 	opacity: 1;
 }
 
@@ -131,10 +131,10 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	background: rgba(128, 128, 128, 0.5), transparent);
+	background: rgba(128, 128, 128, 0.5);
 	border-radius: 0.875rem;
 	transition: top 0.18s ease, height 0.18s ease, opacity 0.14s ease;
-	box-shadow: 0 6px 18px -14px rgba(128, 128, 128, 0.5) 55%, transparent);
+	box-shadow: 0 6px 18px -14px rgba(128, 128, 128, 0.5);
 	z-index: -1;
 }
 

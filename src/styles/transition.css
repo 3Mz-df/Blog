@@ -108,7 +108,7 @@ html.is-animating .transition-swup-fade {
     z-index: 9999;
     pointer-events: none;
     background: var(--primary);
-    box-shadow: 0 0 8px rgba(128, 128, 128, 0.5) 60%, transparent);
+    box-shadow: 0 0 8px rgba(128, 128, 128, 0.5);
     transform-origin: left center;
     transform: scaleX(0);
     opacity: 0;
