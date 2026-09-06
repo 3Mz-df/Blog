@@ -1,4 +1,4 @@
----
+﻿---
 import Live2DWidget from "@components/features/Live2DWidget.astro";
 
 import SpineModel from "@components/features/SpineModel.astro";
@@ -114,6 +114,13 @@ const {
                 encrypted={encrypted}
             />
                     
+            {/* 移动端顶部组件 - 768px及以下显示，放在文章上方 */}
+            {sidebarLayoutConfig.mobileBottomComponents && sidebarLayoutConfig.mobileBottomComponents.length > 0 && (
+                <div id="mobile-bottom-sidebar" class="col-span-1 block md:hidden mb-4">
+					<SideBar side="bottom" headings={headings} encrypted={encrypted}></SideBar>
+                </div>
+            )}
+
             {/* 主内容区包装器 - 包含静态栏位和swup容器，作为单个grid item */}
             <div class={staticBarClass}>
                 {/* 分类导航栏 - 全站渲染并显示 */}
@@ -145,13 +152,6 @@ const {
                 headings={headings}
                 encrypted={encrypted}
             />
-
-            {/* 移动端底部组件 - 768px及以下显示 */}
-            {sidebarLayoutConfig.mobileBottomComponents && sidebarLayoutConfig.mobileBottomComponents.length > 0 && (
-                <div id="mobile-bottom-sidebar" class="col-span-1 block md:hidden mt-4">
-					<SideBar side="bottom" headings={headings} encrypted={encrypted}></SideBar>
-                </div>
-            )}
 
             <div class={footerClassName}>
                 <Footer></Footer>
