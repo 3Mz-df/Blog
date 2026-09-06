@@ -291,10 +291,6 @@
 }
 
 /* 初始状态 */
-.widget-container {
-  opacity: 0;
-}
-
 .widget-container.widget-animated {
   opacity: 1;
 }
