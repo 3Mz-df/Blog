@@ -567,6 +567,5 @@ Boot Spring Cloud Spring Cloud Alibaba Java 3.0.x 2022.0.x 2022.0.x 17+ 3.1.x 20
 6. Spring Boot 3 为什么用 jakarta 而不是 javax？ Java EE 在 Jakarta EE 9 之后把命名空间从`javax.*` 改成`jakarta.*` ，Spring Boot 3 全面跟进 Jakarta EE 9+，所以所有依赖也要用 jakarta 版本（MyBatis-Plus、Druid、Knife4j 都有 jakarta 专用版本）。
 7. 聚合和继承必须一起用吗？ 不必须。聚合是"批量编译"，继承是"共享配置"。可以只聚合（多模块编译但每个模块独立）或只继承（共享父配置但单独编译）。企业实战通常两个都用。
 8. `<relativePath/>` 空标签和有路径的区别？ 空标签表示从仓库找父 pom；有路径表示从本地文件系统找。继承 spring-boot-starter-parent 用空（不在本地工程里）；继承自家父 pom 用`../pom.xml` 。
-把这些过一遍，能讲出来，pom 模板就 真正成了你的项目经验 ，不只是 AI 帮你配的。后面有不懂的具体某行还可以单独问。
 
 
