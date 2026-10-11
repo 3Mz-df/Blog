@@ -1,10 +1,13 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
 import Pagination from "@/components/common/Pagination.astro";
-import PostPage from "@/components/layout/PostPage.astro";
+import PostCard from "@/components/layout/PostCard.astro";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
 import { siteConfig } from "@/config";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import { getSortedPosts } from "@/utils/content-utils";
+import { getPostUrlBySlug } from "@/utils/url-utils";
 export const getStaticPaths = (async ({ paginate }) => {
 	const allBlogPosts = await getSortedPosts();
 	// 使用配置中的文章数量
@@ -16,10 +19,59 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 
 const len = page.data.length;
+
+// 按分类分组展示：category 为空归入"未分类"
+const uncategorizedLabel = i18n(I18nKey.uncategorized);
+const groupMap = new Map<string, CollectionEntry<"posts">[]>();
+for (const post of page.data) {
+	const name = post.data.category?.trim() || uncategorizedLabel;
+	if (!groupMap.has(name)) groupMap.set(name, []);
+	groupMap.get(name)!.push(post);
+}
+// 组排序：文章数多的在前，数量相同按名称
+const groups = [...groupMap.entries()]
+	.map(([name, posts]) => ({ name, posts }))
+	.sort((a, b) => b.posts.length - a.posts.length || a.name.localeCompare(b.name));
+
+let delay = 0;
+const interval = 50;
 ---
 
 <MainGridLayout>
-  <PostPage page={page} />
+  {
+    groups.map(({ name, posts }) => (
+      <section class="mb-4">
+        <div
+          class="card-base flex items-baseline gap-3 px-6 py-4 mb-4 onload-animation"
+          style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+        >
+          <h2 class="text-2xl font-bold text-90">{name}</h2>
+          <span class="text-sm text-50">{posts.length} 篇</span>
+        </div>
+        <div class="flex flex-col gap-4 md:gap-4">
+          {posts.map((entry, index) => (
+            <PostCard
+              entry={entry}
+              title={entry.data.title}
+              tags={entry.data.tags}
+              category={entry.data.category}
+              published={entry.data.published}
+              updated={entry.data.updated}
+              url={getPostUrlBySlug(entry.id)}
+              image={entry.data.image}
+              description={entry.data.description}
+              draft={entry.data.draft}
+              pinned={entry.data.pinned}
+              password={!!entry.data.password}
+              loading={index < 2 ? "eager" : "lazy"}
+              class:list="onload-animation post-card-item"
+              style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
   {
     page.total > page.size && (
       <Pagination
