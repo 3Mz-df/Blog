@@ -4,7 +4,7 @@ published: 2026-09-22
 description: API问ai就好？
 image: ''
 tags: []
-category: ''
+category: '技术学习'
 draft: false
 lang: ''
 slug: api-ai-好

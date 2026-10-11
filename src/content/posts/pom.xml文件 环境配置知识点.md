@@ -4,7 +4,7 @@ published: 2026-09-21
 description: pom.xml文件 环境配置知识点
 image: ''
 tags: []
-category: ''
+category: '技术学习'
 draft: false
 lang: ''
 slug: huan-jing-pei-zhi
