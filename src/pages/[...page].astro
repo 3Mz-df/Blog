@@ -28,10 +28,15 @@ for (const post of page.data) {
 	if (!groupMap.has(name)) groupMap.set(name, []);
 	groupMap.get(name)!.push(post);
 }
-// 组排序：文章数多的在前，数量相同按名称
+// 组展示顺序（按此数组排序，未列出的组排在最后，组内按文章数）
+const groupOrder = ["技术学习", "大二上·周记", "未分类"];
 const groups = [...groupMap.entries()]
 	.map(([name, posts]) => ({ name, posts }))
-	.sort((a, b) => b.posts.length - a.posts.length || a.name.localeCompare(b.name));
+	.sort(
+		(a, b) =>
+			groupOrder.indexOf(a.name) - groupOrder.indexOf(b.name) ||
+			b.posts.length - a.posts.length,
+	);
 
 let delay = 0;
 const interval = 50;
